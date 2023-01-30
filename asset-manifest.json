@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/week4_cra_kurly_cors_page/static/css/main.1f3a6be0.css",
+    "main.js": "/week4_cra_kurly_cors_page/static/js/main.9f962877.js",
+    "static/media/85ccaa0c-b2d9-48f4-8710-1fbc4d17fddb.jpg": "/week4_cra_kurly_cors_page/static/media/85ccaa0c-b2d9-48f4-8710-1fbc4d17fddb.7b7de4fd1aa26eba2e50.jpg",
+    "index.html": "/week4_cra_kurly_cors_page/index.html",
+    "main.1f3a6be0.css.map": "/week4_cra_kurly_cors_page/static/css/main.1f3a6be0.css.map",
+    "main.9f962877.js.map": "/week4_cra_kurly_cors_page/static/js/main.9f962877.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f3a6be0.css",
+    "static/js/main.9f962877.js"
+  ]
+}
