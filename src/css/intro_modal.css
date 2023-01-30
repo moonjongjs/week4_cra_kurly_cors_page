@@ -1,0 +1,38 @@
+#introModal {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#introModal .container {
+  width: 440px;
+  height: 585.5px;
+  background: #fff;
+}
+#introModal .container .img-box {
+  width: 100%;
+}
+#introModal .container .img-box img {
+  width: 100%;
+}
+#introModal .container .button-box {
+  width: 100%;
+  height: 59px;
+  display: flex;
+}
+#introModal .container .button-box button {
+  width: 50%;
+  height: 59px;
+  border: 0;
+  cursor: pointer;
+  background: #fff;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+}

@@ -1,0 +1,160 @@
+@charset "UTF-8";
+@import './command.scss';
+
+@import url('#{$path}fonts.css');
+@import url('#{$path}reset.css');
+
+#wrap {
+   width:100%;
+   background: #fff;
+
+   .container {
+      width:100%;
+      position: relative;
+      .address-form {
+         width:100%;   
+         padding: 40px 30px 30px 30px;   
+         .title {
+            width:100%;
+            text-align: center;
+            padding:0 0 40px 0;
+            h1 {
+               font-size: 24px;
+               strong {color: rgb(95, 0, 128);}
+               span {color: rgb(51, 51, 51);}
+               padding:0 0 10px 0;
+            }
+            h2 {
+               font-size: 16px;
+               color:rgb(102, 102, 102);
+            }
+         }
+         .content {
+            width:100%;
+            form {
+               width:100%;
+               ul {
+                  width:100%;
+                  li{
+                     width:100%;                 
+                     &:first-child {
+                        padding:0 130px 10px 0;
+                        position: relative;
+                     }
+                     input {
+                        width:100%;
+                        border:1px solid #ddd;
+                        border-radius: 3px;
+                        background: #fff;
+                        height: 44px;
+                        padding:0 13px;
+                        outline: 1px solid transparent;
+                        outline-offset: -1px;
+                        &:focus {
+                           outline: 1px solid #777;
+                        }
+                        &::placeholder {
+                           color:#aaa;
+                        }
+                     }
+                     
+                     button.search-re-btn {
+                        position: absolute;
+                        top:0;
+                        right:0;
+                        width:120px;
+                        height: 44px;
+                        border:1px solid rgb(95, 0, 128);
+                        border-radius: 3px;
+                        background: #fff;
+                        color: rgb(95, 0, 128);
+                        cursor: pointer;
+                     }
+                     p {
+                        color:#999;
+                        font-size: 12px;
+                        line-height: 130%;
+                        padding:10px 0 20px 0;
+                     }
+                     button.addr-save-btn{
+                        width:100%;
+                        height: 44px;
+                        border:1px solid rgb(95, 0, 128);
+                        border-radius: 3px;
+                        background: rgb(95, 0, 128);
+                        color:#fff;
+                        font-weight: 600;
+                        font-size: 14px;
+                        cursor: pointer;
+                     }
+                  }
+               }
+            }
+            .text-box {
+               width:100%;
+               padding:30px 0 0 0;
+               dl {
+                  dt {
+                     width:100%;
+                     position: relative;;
+                     h3 {
+                        font-size:14px;
+                        color:rgb(240, 63, 64);
+                        padding:0 0 10px 0;
+                        vertical-align: middle;
+                        img {
+                           margin:-3px 0 0 0;
+                        }
+                     }
+                     h4 {
+                        font-size:14px;
+                        color:rgb(51, 51, 51);;
+                        position: relative;
+                        z-index: 1;
+                     }
+                     a {
+                        z-index: 2;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        font-size: 12px;
+                        color:#999;
+                        img {
+                           width:11px;
+                           margin:-3px 0 0 5px;
+                        }
+                     }
+                  }
+
+                  dd {
+                     display: none;
+                     font-size: 12px;
+                     color:#999;
+                     line-height: 140%;
+                     &.on {
+                        display: block;
+                     }
+                     &:nth-child(3){
+                        padding:20px 0 0 0;
+                     }                  
+                  }
+               }
+            }
+         }
+      }
+
+      // 카카오 주소검색 API
+      #layer {
+         z-index:1;
+         position:absolute;
+         width: 100%;
+         height: 100%;
+         border: 0;
+         top: 0;
+         left: 0;         
+         overflow:hidden;         
+         -webkit-overflow-scrolling:touch;
+      }
+
+   }
+}

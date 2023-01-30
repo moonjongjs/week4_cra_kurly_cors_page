@@ -1,0 +1,143 @@
+@charset "UTF-8";
+//공용변수 가져오기
+@import './command.scss';
+
+@import url('#{$path}fonts.css');
+@import url('#{$path}reset.css');
+@import url('#{$path}modal.css');
+@import url('#{$path}header.css');
+@import url('#{$path}footer.css');
+@import url('#{$path}quick_menu.css');
+@import url('#{$path}go_top.css');
+@import url('#{$path}signin/style.css');
+@import url('#{$path}signup/style.css');
+
+
+$slide_img_width: $container_width / 4;
+
+
+#wrap {
+    width:100%;
+    #main {
+        width:100%;
+        #section1 {
+            width:100%;padding:0 0 40px 0;
+            .container {
+                width:100%;
+                .content {
+                    width:100%;
+                    .slide-container {
+                        width:100%;touch-action:pan-left;position: relative;
+                        .slide-view {
+                            width:100%;overflow:hidden;z-index:1;position:relative;
+                            .slide-wrap {
+                                touch-action:pan-x;width:calc(100%*18);display:flex;margin:0 0 0 -100%;position: relative;
+                                .slide {
+                                    width:100%;
+                                    img {
+                                        width:100%;
+                                    }
+                                }
+                            }
+                        }
+
+                        .arrow {
+                            display:none;z-index:2;position:absolute;top:50%;width:52px;height:52px;margin:-26px 0 0 0;
+                            a {
+                                display:inline-block;
+                                img {width:100%;}
+                            }
+                            &.prev-arrow {left:15%;transform:rotate(180deg);} 
+                            &.next-arrow {right:15%;}
+                        }
+
+                        .count-number {
+                            z-index:2;position:absolute;bottom:30px;right:20%;color:rgba(255,255,255, .6);letter-spacing:2px;font-size:14px;padding:5px  15px 7px 15px;background: rgba(0,0,0, .2);border-radius:16px;
+                            em {font-size:15px;font-weight:500;}
+                        }
+                    }
+                }
+            }
+        }
+
+        // 인트로 상품슬라이드(20개) 섹션 모든 공통스타일
+        .public-section {
+            width:100%;padding:40px 0;
+            .container {
+                width:$container_width;margin: 0 auto;
+                .title {
+                    padding:0 0 30px 0;
+                    h2 {text-align: center;color:#333;font-size:28px;font-weight:500;} 
+                } 
+                .content {
+                    width:100%;
+                    .slide-container {
+                        width:100%;position: relative;
+                        .slide-view {
+                            width:100%;overflow:hidden;position: relative;z-index:1;
+                            .slide-wrap {
+                                width:$slide_img_width * $slide_length;position:relative;display:flex;left:-$container_width * 0;
+                                .slide {
+                                    width:$slide_img_width;
+                                    .gap {
+                                        margin:0 7px 20px 7px;
+                                        cursor: pointer;
+                                        .row1 {
+                                            width:100%;padding:0 0 14px 0;
+                                            img {width:100%;} 
+                                        } 
+                                        .row2 {
+                                            width:100%;
+                                            h3 {font-size: 16px;color:#333;font-weight: 400;line-height: 140%;} 
+                                            h4 {
+                                                font-size: 16px;color:#333;font-weight: 800;padding:10px 0;
+                                                span {color:rgb(250,98,47);margin:0 10px 0 0;} 
+                                            } 
+                                            h5 {font-size: 14px;color:rgb(181,181,181);}
+
+                                        } 
+                                    } 
+                                } 
+                            } 
+                        } 
+                        .prev-btn-box {
+                            position: absolute;left:0;top:50%;width:60px;height:60px;margin:-90px 0 0 -30px;z-index:2;
+                            a {
+                                width:100%;display:block;
+                                img {width:100%;}
+                            }
+                        }
+                        .next-btn-box {
+                            position: absolute;right:0;top:50%;width:60px;height:60px;margin:-90px -30px 0 0;z-index:2;transform: rotate(180deg);
+                            a {
+                                width:100%;display:block;
+                                img {width:100%;display:block;}
+                            }
+                        }
+                    } 
+                } 
+            }
+        } 
+
+        #section3 {
+            width:100%;padding:40px 0;
+            .container {
+                width:$container_width;margin: 0 auto;
+                .content {
+                    margin:0 7px;
+                    width:auto;
+                    a {
+                        display:block;
+                        width:100%;
+                        img {
+                            width:100%;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+    }
+}

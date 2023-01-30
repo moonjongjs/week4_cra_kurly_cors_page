@@ -1,0 +1,82 @@
+/* 푸터영역 */
+#wrap #footer {width:100%;background:#fff;position:relative;z-index:1;border-top:1px solid #eee;}
+#wrap #footer .row {width:100%;}
+#wrap #footer .row .container {width:100%;max-width:1050px;margin:0 auto;height:100%;}
+
+#wrap #footer .row1 {width:100%;padding:20px 0 60px 0;}
+/* 푸터 1행 */
+#wrap #footer .row1 .container {display: flex;}
+/* 왼쪽 */
+#wrap #footer .row1 .container .left  {width:50%;}
+#wrap #footer .row1 .container .left  ul {width:100%;}
+#wrap #footer .row1 .container .left  ul li {padding:15px 0;}
+
+/* 왼쪽박스 1행 */
+#wrap #footer .row1 .container .left  ul li h2 {font-size:16px;}
+#wrap #footer .row1 .container .left  ul li h2 strong {font-size:20px;font-weight:500;margin:0 10px 0 0;}
+
+/* 왼쪽박스 2행 전화번호 */
+/* li a  자손 주의 중복요소 적용 */
+/* li > a 자식 */
+#wrap #footer .row1 .container .left  ul li > a {font-size: 28px;font-weight: 700;}
+
+/* 왼쪽박스 3행 */
+#wrap #footer .row1 .container .left  ul li div {display: flex;}
+/* #wrap #footer .row1 .container .left  ul li div span {width:140px;height:40px;margin:0 10px 0 0;border:1px solid #ccc;} */
+/* #wrap #footer .row1 .container .left  ul li div span a {display:flex;width:100%;height:100%;justify-content: center;align-items: center;}
+#wrap #footer .row1 .container .left  ul li div span a:hover {background:#5f0080;color:#fff;} */
+
+#wrap #footer .row1 .container .left  ul li div span {margin:0 10px 0 0;}
+#wrap #footer .row1 .container .left  ul li div span a {display:flex;width:140px;height:40px;border:1px solid #ccc;justify-content: center;align-items: center;font-size:14px;transition: all .3s;}
+#wrap #footer .row1 .container .left  ul li div span a:hover {background:#5f0080;color:#fff;border:1px solid #5f0080;}
+
+/* 왼쪽박스 4행 */
+#wrap #footer .row1 .container .left  ul li p {font-size:12px;color:#999;}
+#wrap #footer .row1 .container .left  ul li p:first-child {padding:0 0 6px 0;}
+#wrap #footer .row1 .container .left  ul li p a {color:#999;}
+
+
+
+
+
+/* 오른쪽 */
+#wrap #footer .row1 .container .right {width:50%;display:flex;justify-content: flex-end;}
+#wrap #footer .row1 .container .right > ul {width:auto;}  /* 우측끝에 정렬 */
+#wrap #footer .row1 .container .right > ul > li {padding:15px 0;}
+
+/* 1행 */
+#wrap #footer .row1 .container .right > ul > li:nth-child(1) span {margin:0 10px 0 0;}
+#wrap #footer .row1 .container .right > ul > li:nth-child(1) span a {font-size:14px;color:#333;transition: all .3s;}
+#wrap #footer .row1 .container .right > ul > li:nth-child(1) span a:hover {color:#5f0080;}
+
+/* 2행 */
+#wrap #footer .row1 .container .right > ul > li:nth-child(2) ul {width:100%;}
+#wrap #footer .row1 .container .right > ul > li:nth-child(2) ul li {font-size:12px;color:#999;padding:3px 0;}
+#wrap #footer .row1 .container .right > ul > li:nth-child(2) ul li i {color:#ccc;margin:0 5px;}
+#wrap #footer .row1 .container .right > ul > li:nth-child(2) ul li a {color:#5f0080}
+#wrap #footer .row1 .container .right > ul > li:nth-child(2) ul li address {display: inline;}
+
+/* 3행 */
+#wrap #footer .row1 .container .right > ul > li:nth-child(3) span {margin:0 10px 0 0;}
+#wrap #footer .row1 .container .right > ul > li:nth-child(3) span a {width:30px;height:30px;display:inline-flex;border-radius:50%;}
+#wrap #footer .row1 .container .right > ul > li:nth-child(3) span a img {width:100%;}
+
+
+
+
+
+
+
+#wrap #footer .row2 {width:100%;padding:20px 0;}
+#wrap #footer .row2 .container ul {display: flex;justify-content: space-between;}
+#wrap #footer .row2 .container ul li {width:25%;}
+#wrap #footer .row2 .container ul li a {display: block;}
+#wrap #footer .row2 .container ul li a p {display: flex;justify-content: stretch;}
+#wrap #footer .row2 .container ul li a p img {width:34px;margin:0 10px 0 0;filter: grayscale(1);}
+#wrap #footer .row2 .container ul li:nth-child(3) a p img {width:102px;}
+#wrap #footer .row2 .container ul li a p span {font-size:10px;width:100%;line-height:130%;}
+
+
+#wrap #footer .row3 {background-color:#f7f7f7;padding:20px 0 30px 0;text-align: center;}
+#wrap #footer .row3 p {color:#999;font-size:10px;padding:3px 0;}
+#wrap #footer .row3 p:last-child {padding-top: 10px;}

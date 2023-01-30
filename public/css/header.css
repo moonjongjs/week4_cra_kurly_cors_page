@@ -1,0 +1,93 @@
+/* 헤더영역 */
+#wrap {width:100%;position:relative;}
+#wrap #header {width:100%;height:156px;/* 임시높이 */background:#fff;position:relative;z-index:3;}
+#wrap #header .container {width:100%;height:100%;}
+
+/* row1 */
+#wrap #header .container .row1 {width:100%;height:36px;}
+#wrap #header .container .row1 .content {width:1050px;height:100%;margin:0 auto;display:flex;justify-content:flex-end;padding:5px 0 19px 0;}
+#wrap #header .container .row1 .content #aside {position: relative;}
+#wrap #header .container .row1 .content #aside span {font-size:12px;}
+#wrap #header .container .row1 .content #aside span a {color:#4c4c4c;transition: all .3s;}
+#wrap #header .container .row1 .content #aside span a.on {color:#5f0080;}
+#wrap #header .container .row1 .content #aside span a:hover {color:#5f0080;}
+#wrap #header .container .row1 .content #aside span i {color:#ccc;margin:0 12px;}
+#wrap #header .container .row1 .content #aside span a img {width:8px;height:5px;margin:0 0 0 5px;}
+/* 팝업창 */
+#wrap #header .container .row1 .content #aside .member-popup {display:none;z-index:2;position: absolute;top:26px;right:0;width:120px;background:#fff;border:1px solid #ccc;border-radius:5px;}
+#wrap #header .container .row1 .content #aside .member-popup ul {padding:6px 15px 12px 15px;}
+#wrap #header .container .row1 .content #aside .member-popup ul li {padding:5px 0;}
+#wrap #header .container .row1 .content #aside .member-popup ul li a {color:#666;font-size:12px;}
+
+
+
+
+/* row2 */
+#wrap #header .container .row2 {width:100%;height:64px;}
+#wrap #header .container .row2 .content {width:1050px;height:100%;margin:0 auto;display:flex;align-items: center;justify-content: space-between;}
+
+
+/* 왼쪽 로고 | 뷰티 */
+#wrap #header .container .row2 .content .left {width:30%;}
+/* 로고 */
+#wrap #header .container .row2 .content .left span:nth-child(1) a {font-size:18px;color:#5f0080;font-weight:500;padding:0 0 0 95px;position: relative;}
+#wrap #header .container .row2 .content .left span:nth-child(1) a i {position:absolute;top:-7px;left:0;width:85px;}
+#wrap #header .container .row2 .content .left span:nth-child(1) a i img {width:100%;}
+/* 구분 bar */
+#wrap #header .container .row2 .content .left span:nth-child(2) {margin:0 8px;}
+#wrap #header .container .row2 .content .left span:nth-child(2) i {color:#eee;}
+/* 뷰티 */
+#wrap #header .container .row2 .content .left span:nth-child(3) a {font-size:18px;color:#b5b5b5;}
+#wrap #header .container .row2 .content .left span:nth-child(3) a img {vertical-align: top;}
+
+
+
+
+
+/* 가운데 검색 입력상자 */
+#wrap #header .container .row2 .content .center {width:400px;}
+#wrap #header .container .row2 .content .center div {position: relative;}
+#wrap #header .container .row2 .content .center div input {z-index:1;position: relative;width:400px;height:48px;border:1px solid #5f0080;border-radius:6px;padding:0 15px;}
+#wrap #header .container .row2 .content .center div input::placeholder {color:#aaa;font-size:16px;}
+#wrap #header .container .row2 .content .center div input:focus {outline:0;}
+/* 돋보기 아이콘 , 버튼 */
+#wrap #header .container .row2 .content .center div .search-box {z-index:2;position: absolute;right:6px;top:6px;width:36px;height:36px;}
+#wrap #header .container .row2 .content .center div .search-box a {display:block;width:100%;}
+#wrap #header .container .row2 .content .center div .search-box a img {width:100%;}
+
+
+
+/* 오른쪽박스 아이콘 */
+#wrap #header .container .row2 .content .right {width:30%;text-align: right;}
+#wrap #header .container .row2 .content .right div span i {margin:0 10px;}
+
+
+/* row3 */
+#wrap #header .container .row3 {width:100%;height:56px;box-shadow:0 2px 5px rgba(0,0,0, .07);}
+/* 윈도우 스크롤 탑값이 헤더 로우2에 도달하면 로우2는 고정된다.(fixed)
+그리고 배경색상이 흰색이고 그림자를 아래부분 나타낸다. */
+#wrap #header .container .row3.on {position:fixed;top:0;left:0;background:#fff;}
+
+
+#wrap #header .container .row3 .content {width:1050px;height:100%;margin:0 auto;display: flex;justify-content:space-between;align-items: center;}
+
+
+
+/* 왼쪽 햄버거메뉴 버튼 */
+#wrap #header .container .row3 .content .left a {color:#444;transition:all .3s;}
+#wrap #header .container .row3 .content .left a:hover {color:#5f0080;}
+#wrap #header .container .row3 .content .left a i {font-size:16px;font-weight:500;}
+#wrap #header .container .row3 .content .left a i:nth-child(1) {margin:0 10px 0 0;}
+#wrap #header .container .row3 .content .left a i img {width:16px;}
+
+/* 가운데 네비게이션 메인메뉴 */
+#wrap #header .container .row3 .content .center ul {width:600px;display: flex;}
+#wrap #header .container .row3 .content .center ul li {width:25%;text-align:center;}
+#wrap #header .container .row3 .content .center ul li a {color:#333;font-size:16px;font-weight:500;transition: .3s;}
+#wrap #header .container .row3 .content .center ul li a:hover {color:#5f0080;text-decoration: underline;}
+#wrap #header .container .row3 .content .center ul li a.on {color:#5f0080;font-weight: 500;}
+
+/* 오른쪽 사이드버튼 샛별, 낮배송 버튼*/
+#wrap #header .container .row3 .content .right a {font-size:13px;padding:4px 16px 8px 16px;display:block;border:1px solid #eee;border-radius:15px 15px 15px 15px;}
+#wrap #header .container .row3 .content .right a i:nth-child(1) {color: #5f0080;}
+#wrap #header .container .row3 .content .right a i:nth-child(2) {color: #333;}

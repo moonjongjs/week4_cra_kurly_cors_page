@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import url(./fonts.css);
+@import url(./reset.css);
+@import url(./modal.css);
+@import url(./header.css);
+@import url(./footer.css);
+
+
+/* 인트로 메인영역 */
+#wrap #main {width:100%;}
+
+/* 섹션1 */
+#wrap #main #section1 {width:100%;padding:0 0 40px 0;}
+#wrap #main #section1 .container {width:100%;}
+#wrap #main #section1 .container .content {width:100%;}
+#wrap #main #section1 .container .content .slide-container {width:100%;touch-action:pan-left;}
+#wrap #main #section1 .container .content .slide-container .slide-view {width:100%;overflow:hidden;}
+#wrap #main #section1 .container .content .slide-container .slide-view .slide-wrap {touch-action:pan-x;width:calc(100%*18);display:flex;margin:0 0 0 -100%;position: relative;}
+#wrap #main #section1 .container .content .slide-container .slide-view .slide-wrap .slide {width:100%;}
+#wrap #main #section1 .container .content .slide-container .slide-view .slide-wrap .slide img {width:100%;}
+
+/* 좌우 화살 버튼 */
+#wrap #main #section1 .container .content .slide-container {position: relative;}
+#wrap #main #section1 .container .content .slide-container .slide-view {z-index:1;position:relative;}
+
+
+/* 화살표함수 제작 후 테스 끝나면 안보이게 한다. display: none */
+/* 제이쿼리 마우스 이벤트 활용 하여 아래와 같이 이벤트를 구현한다. */
+/* 마우스를 슬라이드위에 올리면 부드럽게 보이게 한다. 페이드인 효과 */
+/* 마우스가 슬라이드위를 떠나면 부드럽게 슴기기 한다. 페이드아웃 효과 */
+#wrap #main #section1 .container .content .slide-container .arrow {display:none;z-index:2;position:absolute;top:50%;width:52px;height:52px;margin:-26px 0 0 0;}
+#wrap #main #section1 .container .content .slide-container .arrow a {display:inline-block;}
+#wrap #main #section1 .container .content .slide-container .arrow a img {width:100%;}
+#wrap #main #section1 .container .content .slide-container .prev-arrow {left:15%;transform:rotate(180deg);}
+#wrap #main #section1 .container .content .slide-container .next-arrow {right:15%;}
+
+/* 카운트 번호 */
+
+#wrap #main #section1 .container .content .slide-container .count-number {z-index:2;position:absolute;bottom:30px;right:20%;color:rgba(255,255,255, .6);letter-spacing:2px;font-size:14px;padding:5px  15px 7px 15px;background: rgba(0,0,0, .2);border-radius:16px;}
+#wrap #main #section1 .container .content .slide-container .count-number em {font-size:15px;font-weight:500;}
+
+
+
+
+
+/* 섹션2 */
+#wrap #main #section2 {width:100%;padding:40px 0;} 
+#wrap #main #section2 .container {width:1064px;margin: 0 auto;} 
+#wrap #main #section2 .container .title {padding:0 0 30px 0;} 
+#wrap #main #section2 .container .title h2 {text-align: center;color:#333;font-size:28px;font-weight:500;} 
+
+#wrap #main #section2 .container .content {width:100%;} 
+#wrap #main #section2 .container .content .slide-container {width:100%;position: relative;} 
+#wrap #main #section2 .container .content .slide-container .slide-view {width:100%;overflow:hidden;position: relative;z-index:1;} 
+#wrap #main #section2 .container .content .slide-container .slide-view .slide-wrap {width:calc(266px*20);position:relative;display:flex;left:calc(-1064px*0);} 
+#wrap #main #section2 .container .content .slide-container .slide-view .slide-wrap .slide {width:266px;} 
+#wrap #main #section2 .container .content .slide-container .slide-view .slide-wrap .slide .gap {padding:0 7px 0 7px;} 
+#wrap #main #section2 .container .content .slide-container .slide-view .slide-wrap .slide .gap .row1 {width:100%;padding:0 0 14px 0;} 
+#wrap #main #section2 .container .content .slide-container .slide-view .slide-wrap .slide .gap .row1 img {width:100%;} 
+
+#wrap #main #section2 .container .content .slide-container .slide-view .slide-wrap .slide .gap .row2 {width:100%;} 
+#wrap #main #section2 .container .content .slide-container .slide-view .slide-wrap .slide .gap .row2 h3 {font-size: 16px;color:#333;font-weight: 400;line-height: 140%;} 
+#wrap #main #section2 .container .content .slide-container .slide-view .slide-wrap .slide .gap .row2 h4 {font-size: 16px;color:#333;font-weight: 800;padding:10px 0;} 
+#wrap #main #section2 .container .content .slide-container .slide-view .slide-wrap .slide .gap .row2 h4 span {color:rgb(250,98,47);margin:0 10px 0 0;} 
+#wrap #main #section2 .container .content .slide-container .slide-view .slide-wrap .slide .gap .row2 h5 {font-size: 14px;color:rgb(181,181,181);}
+
+/* 좌우화살버튼 */
+#wrap #main #section2 .container .content .slide-container .prev-btn-box {position: absolute;left:0;top:50%;width:60px;height:60px;margin:-90px 0 0 -30px;z-index:2;}
+#wrap #main #section2 .container .content .slide-container .prev-btn-box a {width:100%;display:block;}
+#wrap #main #section2 .container .content .slide-container .prev-btn-box a img {width:100%;}
+
+#wrap #main #section2 .container .content .slide-container .next-btn-box {position: absolute;right:0;top:50%;width:60px;height:60px;margin:-90px -30px 0 0;z-index:2;transform: rotate(180deg);}
+#wrap #main #section2 .container .content .slide-container .next-btn-box a {width:100%;display:block;}
+#wrap #main #section2 .container .content .slide-container .next-btn-box a img {width:100%;display:block;}
+
+
+

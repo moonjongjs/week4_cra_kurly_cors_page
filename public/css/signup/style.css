@@ -1,0 +1,557 @@
+@charset "UTF-8";
+
+/* 메인영역 */
+#wrap #main.member-gaib {
+  padding: 60px 0 130px 0;
+}
+
+#wrap #main.member-gaib .container {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* 회원가입폼 */
+#wrap #main.member-gaib .container #memberGaib {
+  width: 100%;
+}
+
+/* 폼제목 */
+#wrap #main.member-gaib .container #memberGaib .title {
+  width: 100%;
+  border-bottom: 2px solid #000;
+}
+
+#wrap #main.member-gaib .container #memberGaib .title h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  color: rgb(51, 51, 51);
+  padding: 0 0 50px 0;
+}
+
+#wrap #main.member-gaib .container #memberGaib .title p {
+  text-align: right;
+  font-size: 12px;
+  padding: 0 0 13px 0;
+}
+
+#wrap #main.member-gaib .container #memberGaib .title p i {
+  color: rgb(238, 106, 123);
+}
+
+/* 폼내용 */
+#wrap #main.member-gaib .container #memberGaib .content {
+  width: 100%;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form {
+  width: 100%;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul {
+  width: 100%;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li {
+  width: 100%;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+}
+
+/* 왼족박스 이름표 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .left {
+  width: 139px;
+  display: flex;
+  align-items: center;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .left h3 {
+  color: rgb(51, 51, 51);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .left h3 i {
+  color: rgb(238, 106, 123);
+}
+
+/* 오른쪽박스 입력상자 우측버튼은 공간은 패딩으로 확보 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right {
+  width: 461px;
+  padding: 0 128px 0 0;
+  position: relative;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right input[type=text] {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #333;
+  padding: 0 15px;
+  font-size: 14px;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right input[type=text]::-moz-placeholder {
+  color: #aaa;
+  font-size: 14px;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right input[type=text]:-ms-input-placeholder {
+  color: #aaa;
+  font-size: 14px;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right input[type=text]::placeholder {
+  color: #aaa;
+  font-size: 14px;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right input[type=text]:focus {
+  outline: 1px solid #444;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right input[type=password] {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #333;
+  padding: 0 15px;
+  font-size: 14px;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right input[type=password]::-moz-placeholder {
+  color: #aaa;
+  font-size: 14px;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right input[type=password]:-ms-input-placeholder {
+  color: #aaa;
+  font-size: 14px;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right input[type=password]::placeholder {
+  color: #aaa;
+  font-size: 14px;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right input[type=password]:focus {
+  outline: 1px solid #444;
+}
+
+/* 오른쪽 중복확인버튼 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right button {
+  width: 120px;
+  height: 46px;
+  border: 1px solid rgb(95, 0, 128);
+  color: rgb(95, 0, 128);
+  background: rgb(255, 255, 255);
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right button.hp-btn {
+  border-color: #ddd;
+  color: #ccc;
+  cursor: default;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right button.hp-btn.on {
+  border-color: rgb(95, 0, 128);
+  color: rgb(95, 0, 128);
+  cursor: pointer;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right button.hp-btn.on.hide {
+  display: none;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li.hp2-box {
+  display: none;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li.hp2-box.on {
+  display: block;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right #hp.on {
+  background-color: rgba(70, 90, 200, 0.1);
+  user-select: none;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right #hp2 {
+  display: none;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right #hp2.on {
+  display: block;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right button.hp2-btn {
+  display: none;
+  border-color: #ddd;
+  color: #ccc;
+  cursor: default;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right button.hp2-btn.on {
+  display: block;
+  border-color: rgb(95, 0, 128);
+  color: rgb(95, 0, 128);
+  cursor: pointer;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right button.hp3-btn {
+  display: none;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right button.hp3-btn.on {
+  display: block;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right button img {
+  vertical-align: middle;
+  margin: -2px 0 0 0;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right p.addr-info1 {
+  font-size: 12px;
+  color: rgb(95, 0, 128);
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right p.addr-info2 {
+  font-size: 12px;
+  padding: 15px 0 0 0;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li.addr2-box {
+  display: none;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li.addr2-box.on {
+  display: block;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right input[id=addr1] {
+  display: none;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right input[id=addr1].on {
+  display: block;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right button[class=addr-btn] {
+  display: none;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right button[class=addr-btn].on {
+  display: block;
+  z-index: 5;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right button[class=addr-bar-btn] {
+  position: relative;
+  width: 100%;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right button[class=addr-bar-btn].on {
+  display: none;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right p.error-msg {
+  color: rgb(240, 63, 64);
+  font-size: 13px;
+  font-weight: 400;
+  padding: 8px 0 0 0;
+  display: none;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right p.error-msg.on {
+  display: block;
+}
+
+/* 성별 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.gender {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.gender label {
+  font-size: 14px;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.gender label input[type=radio] {
+  width: 24px;
+  height: 24px;
+  margin: 0 9px 0 0;
+  /* 라디오 체크박스 디자인은 반드시 본래 모양을 사용안함 */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+/* 성별 라디오 버튼 선택(체크드)되면 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right label input[type=radio]:checked {
+  border: 7px solid rgb(95, 0, 128);
+}
+
+/* 생년월일 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.birth .birth-box {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 3;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.birth .birth-box ul {
+  width: 100%;
+  display: flex;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.birth .birth-box ul li:nth-child(odd) {
+  width: 30%;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.birth .birth-box ul li:nth-child(even) {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.birth .birth-box ul li div {
+  width: 100%;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.birth .birth-box ul li div input[type=text] {
+  border: 0;
+  text-align: center;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.birth .birth-box ul li div input[type=text]:focus {
+  outline: 0;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.birth .birth-box ul li i {
+  color: #ddd;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* 추가입력사항 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.add-input .radio-box {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.add-input .radio-box label {
+  font-size: 14px;
+}
+
+/* 라디오버튼 UIUX 디자인 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.add-input .radio-box label input[type=radio] {
+  width: 24px;
+  height: 24px;
+  margin: 0 9px 0 0;
+  /* 원래의 모양 사용안함 appearance: none; */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+/* 라디오버튼 체크 이벤트 UIUX 디자인 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.add-input .radio-box label input[type=radio]:checked {
+  border: 7px solid rgb(95, 0, 128);
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.add-input p {
+  font-size: 12px;
+  color: #666;
+  line-height: 140%;
+}
+
+/* 추가입력사항 아래 2줄 숨김 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li.add-input2,
+#wrap #main.member-gaib .container #memberGaib .content form ul li.add-input3 {
+  display: none;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li.add-input2.on,
+#wrap #main.member-gaib .container #memberGaib .content form ul li.add-input3.on {
+  display: block;
+}
+
+/* 구분 라인 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li.line-hr {
+  padding: 15px 0 25px 0;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* 이용약관동의 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.service {
+  padding: 0;
+  position: relative;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.service .check-box {
+  position: relative;
+  z-index: 1;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.service .check-box-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  font-size: 14px;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.service .check-box-right a {
+  color: rgb(95, 0, 128);
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.service .check-box-right a i {
+  vertical-align: baseline;
+  margin: -2px 0 0 5px;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.service .check-box label {
+  font-size: 14px;
+  color: #333;
+}
+
+/* 모두 체크 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.service .check-box.all-check label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* 체크5,6 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.service .check-box.chk56 {
+  padding: 0 0 0 33px;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.service .check-box.chk56 label:nth-child(1) {
+  margin: 0 50px 0 0;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.service .check-box label i {
+  color: #aaa;
+  margin: 0 0 0 7px;
+  vertical-align: baseline;
+}
+
+/* 체크박스 UIUX 디자인 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.service .check-box label input[type=checkbox] {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  /* 기존 모양 사용안함 */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* 사용자 디자인(UI) */
+  background: url(../../img/check.svg) no-repeat 50% 50%;
+  background-size: 24px 24px;
+  margin: 0 9px 0 0;
+  cursor: pointer;
+}
+
+/* 체크박스 클릭 체크된 이벤트 모양 디자인 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.service .check-box label input[type=checkbox]:checked {
+  background: url(../../img/check_on.svg) no-repeat 50% 50%;
+}
+
+/* 체크박스 아래 안내 텍스트 */
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.service .guid-text {
+  padding: 0 0 0 33px;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form ul li .wrap .right.service .guid-text p {
+  font-size: 12px;
+  color: #666;
+}
+
+#wrap #main.member-gaib .container #memberGaib .content form .button-box {
+  padding: 50px 0 0 0;
+  text-align: center;
+}
+#wrap #main.member-gaib .container #memberGaib .content form .button-box button {
+  width: 240px;
+  height: 56px;
+  color: #fff;
+  background: rgb(95, 0, 128);
+  border: 0;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#confirmModal {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+#confirmModal.on {
+  display: flex;
+}
+#confirmModal .container {
+  width: 360px;
+  margin: auto;
+  background: #fff;
+  border-radius: 5px;
+}
+#confirmModal .container .confirm-box {
+  padding: 40px 30px;
+}
+#confirmModal .container .confirm-box h2 {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+  line-height: 150%;
+}
+#confirmModal .container .button-box {
+  border-top: 1px solid #eee;
+}
+#confirmModal .container .button-box button {
+  font-size: 16px;
+  color: rgb(95, 0, 128);
+  font-weight: 600;
+  width: 100%;
+  height: 55px;
+  border: 0;
+  background: #fff;
+  cursor: pointer;
+}

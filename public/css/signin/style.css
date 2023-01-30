@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+/* 로그인 스타일 */
+#main.login .container {
+  width: 340px;
+  margin: 0 auto;
+}
+
+#main.login .container #login ul li {
+  padding: 5px 0;
+}
+
+#main.login .container #login ul li h1 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 0 0 20px 0;
+}
+
+/* 
+#main.login .container #login ul li h1[id='titleId'] {text-align: center;font-size: 20px;font-weight: 800;padding:0 0 20px 0;}
+#main.login .container #login ul li h1[title='로그인'] {text-align: center;font-size: 20px;font-weight: 800;padding:0 0 20px 0;}
+#main.login .container #login ul li h1[title*='로'] {text-align: center;font-size: 20px;font-weight: 800;padding:0 0 20px 0;}
+#main.login .container #login ul li h1[title^='로'] {text-align: center;font-size: 20px;font-weight: 800;padding:0 0 20px 0;}
+#main.login .container #login ul li h1[title$='인'] {text-align: center;font-size: 20px;font-weight: 800;padding:0 0 20px 0;} 
+#main.login .container #login ul li input[id='id'] {width:100%;height:54px;border:1px solid #ccc;background:#fff;}
+#main.login .container #login ul li input[id='pw'] {width:100%;height:54px;border:1px solid #ccc;background:#fff;}
+*/
+#main.login .container #login ul li input[type=text] {
+  width: 100%;
+  height: 54px;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0 15px;
+  border-radius: 3px;
+  transition: all 0.6s;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+}
+
+#main.login .container #login ul li input[type=text]::-moz-placeholder {
+  color: #666;
+  font-size: 14px;
+}
+
+#main.login .container #login ul li input[type=text]:-ms-input-placeholder {
+  color: #666;
+  font-size: 14px;
+}
+
+#main.login .container #login ul li input[type=text]::placeholder {
+  color: #666;
+  font-size: 14px;
+}
+
+#main.login .container #login ul li input[type=text]:focus {
+  outline: 1px solid #444;
+}
+
+#main.login .container #login ul li a {
+  font-size: 12px;
+}
+
+#main.login .container #login ul li i {
+  font-size: 12px;
+  color: #bbb;
+  margin: 0 2px;
+}
+
+#main.login .container #login ul li:nth-child(4) {
+  text-align: right;
+  padding-bottom: 25px;
+}
+
+#main.login .container #login ul li button {
+  width: 100%;
+  height: 54px;
+  border: 1px solid #5f0080;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Noto Sans KR";
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#main.login .container #login ul li button[class=login-btn] {
+  background: #5f0080;
+  color: #fff;
+}
+
+#main.login .container #login ul li button[class=gaib-btn] {
+  background: #fff;
+  color: #5f0080;
+}

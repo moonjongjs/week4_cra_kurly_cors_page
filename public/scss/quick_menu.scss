@@ -1,0 +1,100 @@
+#wrap {
+   width:100%;
+
+   #quickMenu {
+      z-index:2;
+      position: absolute;
+      right: 20px;
+      top: 706px;
+      width: 80px;
+      > ul {
+         width: 100%;
+         > li {
+            width: 100%;
+            .gap {
+               padding: 0 0 10px 0;
+               .wrap {
+                 width: 100%;                 
+               }
+            }
+
+            // 샛별.낮 배송 안내
+            &:nth-child(1){
+               .gap {
+                  .wrap {
+                     a {
+                        display: block;
+                        width: 100%;
+                        img {
+                           width: 100%;
+                        }
+                     }
+                  }
+               }
+            }
+            // 등급별 혜택 ... 링크버튼3개
+            &:nth-child(2){
+                .gap {
+                  .wrap {
+                     ul {
+                        width:100%;
+                        border:1px solid #ccc;
+                        border-bottom:0;
+                        li {
+                           width:100%;
+                           border-bottom:1px solid #ccc;
+                           a {
+                              display: flex;
+                              height: 29px;
+                              align-items: center;
+                              justify-content: center;
+                              font-size:12px;
+                              &:hover {
+                                 color:rgb(95, 0, 128);
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+            // 최근 본 상품 목록 이미지
+            &:nth-child(3){
+               .gap {                  
+                  .wrap {
+                     border:1px solid #ccc;
+                     span {
+                        display: block;
+                        padding: 5px 0 5px 0;
+                        a {
+                           display: flex;
+                           height: 10px;
+                           justify-content: center;
+                           align-items: center;                           
+                           img {
+                              height:20px;
+                           }
+                        }
+                     }
+                     h2 {
+                        padding:10px 0;font-size: 12px;text-align: center;color:#222;font-weight:500;
+                     }
+                     ul {
+                        width:100%;
+                        li {
+                           width:100%;
+                           .img-gap {
+                              padding:3px 8px;
+                              img {
+                                 width:100%;
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

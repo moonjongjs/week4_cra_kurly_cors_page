@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>주소검색 팝업창 | 마켓컬리</title>
+   <!-- 파비콘 -->
+   <link rel="shortcut icon" href="https://res.kurly.com/images/marketkurly/logo/Icon_114.png" type="image/x-icon">
+   <meta name="description" content="입안 가득  퍼지는 육즙의 매력 :: Love Food, Love Life. 마켓컬리! 당일 수확 채소, 과일, 맛집 음식까지 내일 아침 문 앞에서 만나요!">
+   <meta name="keywords"    content="마켓컬리, 신선식품">
+   <meta name="publisher"   content="Moon Seonjong">
+
+   <link rel="stylesheet" href="./css/popup.css">
+   
+   <!-- 제이쿼리 오픈소스 ../../ 루트영역의 제이쿼리 공용파일-->
+   <script src="./js/lib/jquery-1.12.4.min.js"></script>
+   
+   <!-- 카카오주소검색 API -->
+   <script src="./js/lib/postcode.v2.js"></script>
+   
+
+
+</head>
+<body  onload="sample2_execDaumPostcode();">
+ <diw id="wrap">
+   <div class="container">
+
+      <div class="address-form">
+         <div class="title">
+            <h1><strong>샛별배송</strong><span>지역입니다.</span></h1>
+            <h2>매일 아침, 문 앞까지 신선함을 전해드려요.</h2>
+         </div>
+         <div class="content">
+            <form action="">
+               <ul>
+                  <li><input disabled type="text" id="addr1" name="addr1" placeholder="주소검색"><button class="search-re-btn"><img src="./img/ico_search.svg" alt="">재검색</button></li>
+                  <li><input type="text" id="addr2" name="addr2" placeholder="나머지 주소를 입력해 주세요"></li>
+                  <li>
+                     <p>
+                        ※ 저장된 배송지는 최대 7일 간 임시 저장 후 자동 삭제됩니다.<br>
+                        로그인 할 경우, 회원님의 배송지 목록에 추가됩니다.
+                     </p>
+                  </li>
+                  <li><button class="addr-save-btn">저장</button></li>
+               </ul>
+            </form>
+            <div class="text-box">
+               <dl>
+                  <dt><h3><img src="./img/notice_14_14_f03f40.svg" alt=""> 샛별배송 지역 중 배송불가 장소 안내</h3></dt>
+                  <dt>
+                     <h4>관공서 / 학교 / 병원 / 시장 / 공단지역 / 산간지역 / 백화점 등</h4>
+                     <a href="#" class="more-view-btn">자세히보기<img src="./img/ico_arrow_down_11x10.svg" alt=""></a>
+                  </dt>              
+                  <dd>가락동농수산물도매시장</dd>
+                  <dd>가락동농수산물시장</dd>
+                  <dd>가천대학교</dd>
+                  <dd>고려대학교안암캠퍼스</dd>
+                  <dd>고매동 일부(일부지역만 배송가능)</dd>
+                  <dd>국립중앙박물관</dd>
+                  <dd>국민대학교</dd>
+                  <dd>덕성여자대학교</dd>
+                  <dd>덕양구 신원동 일부(일부지역만 배송가능)</dd>
+                  <dd>도내동 일부(원흥지구만 배송가능)</dd>
+                  <dd>동덕여자대학교</dd>
+                  <dd>반월특수지구</dd>
+                  <dd>서경대학교</dd>
+                  <dd>서울사이버대학교</dd>
+                  <dd>서울시립대학교</dd>
+                  <dd>서울여자대학교</dd>
+                  <dd>성균관대학교</dd>
+                  <dd>성신여자대학교</dd>
+                  <dd>세종대학교</dd>
+                  <dd>연세대학교</dd>
+                  <dd>이화여자대학교</dd>
+                  <dd>한국외국어대학교</dd>
+                  <dd>홍익대학교</dd>
+               </ul>
+            </div>
+
+         </div>
+      </div>
+
+      
+      <!-- 카카오주소검색 -->
+      <!-- 돔 컨테이너 -->
+      <div id="layer"></div>
+
+      <script>
+
+
+         function sample2_execDaumPostcode() {
+            (function($){ //제이쿼리 사용
+
+               // 우편번호 찾기 화면을 넣을 element
+               var element_layer = $('#layer');
+
+               $('.address-form').hide(); //주소 입력폼
+               $('#layer').show(); //주소 검색 API
+
+
+               new daum.Postcode({
+                     oncomplete: function(data) {
+
+                        var addr = ''; // 주소 변수
+                        var extraAddr = ''; // 참고항목 변수
+
+                        //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                        if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                           addr = data.roadAddress;
+                        } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                           addr = data.jibunAddress;
+                        }
+
+                        // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                        if(data.userSelectedType === 'R'){
+                           // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                           // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                           if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                                 extraAddr += data.bname;
+                           }
+                           // 건물명이 있고, 공동주택일 경우 추가한다.
+                           if(data.buildingName !== '' && data.apartment === 'Y'){
+                                 extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                           }
+                           // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                           if(extraAddr !== ''){
+                                 extraAddr = ' (' + extraAddr + ')';
+                           }                                 
+                        } else {
+                           extraAddr='';
+                        }
+
+                        // 우편번호와 주소 정보를 해당 필드에 넣는다.                            
+                        //////////////////////////////////////////////////////////////////
+                        // 도로명 우편번호 + 주소 
+                        $('#addr1').val(`(${data.zonecode}) ${addr}${extraAddr}`);
+                        $('#addr2').focus();
+                        //////////////////////////////////////////////////////////////////
+
+                        $('.address-form').show(); //주소 입력폼
+                        $('#layer').hide(); //주소 검색 API
+                     },
+                     width : '100%',
+                     height : '100%'
+               }).embed(element_layer);
+               
+
+
+
+               // 저장버튼 클릭 이벤트
+               $('.addr-save-btn').on({
+                  click: function(e){
+                     e.preventDefault();
+                     
+                     // 부모창(팝업창을 열었던 오프너 opener 부모창)의 주소1 #addr1 클래스 추가 on
+                     opener.$('#addr1, .addr-bar-btn, .addr2-box').addClass('on');
+                     opener.$('#addr1').val( $('#addr1').val() );
+                     opener.$('#addr2').val( $('#addr2').val() );
+  
+  
+                     // 부모창 세션 스토레이지(SESSION STORAGE) 주소 저장하기
+                     // 주소를 JSON 객체로 저장
+                     // 세션 스토레이지 저장할 때 객체는 저장하면 인식을 못해서 출력이 Obejct
+                     // 그래서 객체 문자열로 변환 저장한다.  JSON.stringify(주소)
+                     // 가져와서 사용시는 JSON.parse(주소)  다시 객체로 되돌려서 사용
+                     // 저장하기 setItem(키, 내용)
+                     // 가져오기 getItem(키)
+                     const 주소 = {
+                        주소1 : $('#addr1').val(),
+                        주소2 : $('#addr2').val()
+                     }
+                     const key = 'MJ-KURLY_ADDRESS'; // 정의한 키(KEY) 이름
+                     const keyValue = JSON.stringify(주소);
+
+                     opener.sessionStorage.setItem( key , keyValue );
+                     opener.$('#addr2').focusin();
+                     window.close(); //팝업창(자식창) 닫기
+                     
+                  }
+               })
+
+
+               // 재검색 버튼 클릭 이벤트
+               $('.search-re-btn').on({
+                  click: function(e){
+                     e.preventDefault();
+                     sample2_execDaumPostcode();                     
+                  }
+               })
+
+               // 더보기
+               $('.more-view-btn').on({
+                  click: function(e){           
+                     e.preventDefault();
+                     $('.text-box dd').toggleClass('on');
+                  }
+               });
+
+
+
+            })(jQuery);
+
+         }
+
+      </script>
+
+
+   </div>
+ </diw>  
+
+</body>
+</html>
